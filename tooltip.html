@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<style>
+.tooltip{
+position:relative;
+}
+.tooltip .tooltiptext{
+visibility:hidden;
+width:120px;
+background-color:red;
+color:white;
+text-align:center;
+border-radius:6px;
+padding:5px 0;
+position:absolute;
+z-index:1;
+bottom:70%;
+left:50%;
+}
+.tooltip:hover .tooltiptext{
+visibility:visible;
+}
+</style>
+<body style="text-align:center;">
+<p>move the mouse over the image below</p>
+<div class="tooltip"> <img src="https://media.istockphoto.com/id/474935822/photo/minions-toy-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=gOWXIKjN9JJUerJOeiCc7uOmXT-eldGsQctRDkhV2xQ=">
+<img class="tooltiptext" src="https://media.tenor.com/-Y2YOay3_JoAAAAM/its-friday-dancing.gif">
+</div>
+</body>
+</html>

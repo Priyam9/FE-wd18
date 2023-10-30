@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>line canva</title>
+<style>
+canvas{ border: 2px solid black}
+</style>
+</head>
+<body>
+<canvas id="myline" height="500px" width="500px"></canvas>
+<script>
+let line= document.getElementById("myline");
+let l= line.getContext("2d");
+l.beginPath();
+l.moveTo(0,100);
+l.lineTo(100,0);
+
+l.moveTo(0,300);
+l.lineTo(300,0);
+
+l.moveTo(0,500);
+l.lineTo(500,0);
+
+l.moveTo(0,350);
+l.lineTo(350,0);
+
+
+
+
+
+l.stroke();
+</script>
+</body>
+</html>

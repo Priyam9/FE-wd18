@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>canvas</title>
+<style>
+canvas{border: 2px solid black}
+</style>
+</head>
+<body>
+<canvas                                                                                                                                id="mytask" height="500px" width="500px"></canvas>
+<script>
+let rect= document.getElementById("mytask");
+let c= rect.getContext("2d");
+c.fillStyle="yellow";
+c.fillRect(100,100,110,110);
+c.fillStyle="blue";
+c.fillRect(300,100,110,110);
+c.fillStyle="blue";
+c.fillRect(100,300,110,110);
+c.fillStyle="yellow";
+c.fillRect(300,300,110,110);
+c.fillStyle="red";
+c.fillRect(180,180,140,140);
+c.fillStyle="yellow";
+c.fillRect(200,200,100,100);
+c.fillStyle="blue";
+c.fillRect(220,220,60,60);
+
+</script>
+</body>
+</html>
