@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body>
+<h1>{{trop1}}</h1>
+
+<div ng-controller="controller">
+<h1>{{trop1}}</h1>
+</div>
+
+<h1>{{trop1}}</h1>
+<script>
+var app= angular.module('myapp',[]);
+app.run(function($rootScope){
+$rootScope.trop1='worldcup';
+});
+app.controller('controller',function($scope){
+$scope.trop1='ashes';
+});
+</script>
+
+</body>
+</html>

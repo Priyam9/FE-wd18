@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body>
+
+<div ng-controller="controller">
+<h3>{{code}}</h3>
+</div>
+
+<script>
+var app= angular.module('myapp',[]);
+
+app.service('code',function(){
+this.myfunc=function(x){
+return x.toString(16);
+}
+});
+app.controller('controller',function($scope,code){
+$scope.code= code.myfunc(255);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html ng-app="myapp">
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+.img1{
+background-image:url("boat.jpg");
+border:2px solid black;
+height:500px;
+width:300px;
+}
+.img2{
+background-image:url("naruto.jpg");
+border:2px solid black;
+height:500px;
+width:300px;
+}
+.img3{
+background-image:url("nature.jpg");
+border:2px solid black;
+height:500px;
+width:600px;
+}
+
+</style>
+</head>
+
+<body>
+<div ng-controller="controller">
+
+<p ng-class="{img1:makeimg1, img2:makeimg2, img3:makeimg3}">click to apply</p>
+
+<hr>
+<label><input type="checkbox" ng-model="makeimg1">IMAGE1</label>
+<label><input type="checkbox" ng-model="makeimg2">IMAGE2</label>
+<label><input type="checkbox" ng-model="makeimg3">IMAGE3</label>
+<hr>
+
+</div>
+
+<script>
+var app= angular.module("myapp",[]);
+app.controller("controller",function($scope){
+$scope.classimg1='';
+$scope.classimg2='';
+
+$scope.makeimg1=function(){
+if($scope.classimg1.length==0){
+$scope.classimg1='img1';
+}else{
+$scope.classimg1='';
+}
+};
+
+$scope.makeimg2=function(){
+if($scope.classimg2.length==0){
+$scope.classimg2='img2';
+}else{
+$scope.classimg2='';
+}
+};
+
+$scope.makeimg3=function(){
+if($scope.classimg3.length==0){
+$scope.classimg3='img3';
+}else{
+$scope.classimg3='';
+}
+};
+});
+</script>
+
+</body>
+</html>

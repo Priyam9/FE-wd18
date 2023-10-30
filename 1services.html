@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body>
+<div ng-controller="controller">
+<p>the url of this page</p>
+<h3>{{myUrl}}</h3>
+</div>
+
+<p>this example uses the built in $location services to get absolute url of the page</p>
+
+<script>
+var app= angular.module('myapp',[]);
+app.controller('controller',function($scope,$location){
+$scope.myUrl = $location.absUrl();
+});
+
+</script>
+
+</body>
+</html>

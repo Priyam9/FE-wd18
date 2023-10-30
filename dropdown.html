@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="myapp">
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body style="text-align:center">
+
+<h1 style="color:red">Quastech</h1>
+
+<h3>program for dropdown list</h3>
+
+<div ng-controller="app1" ng-init="StudentId=1">
+
+Sorting Algorithms:
+<select ng-model="Sorting" ng-options="select.name as select.name for select in sorting"></select>
+<br><br><br>
+
+Selected Items:<input type="text" ng-model="Sorting" />
+</div>
+
+<script>
+var app=angular.module("myapp",[]);
+app.controller('app1',['$scope',function($scope){
+$scope.sorting=[{
+name:'fish',
+id:1
+},{
+name:'juice',
+id:2
+},{
+name:'veggies',
+id:3
+},{
+name:'cream',
+id:4
+},{
+name:'milk',
+id:6
+}];
+}]);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.frm{
+border:10px groove red;
+justify-content:center;
+align-items:center;
+display:flex;
+color:white;
+}
+</style>
+</head>
+<body bgcolor="black">
+<div ng-app="" class="frm">
+<form name="myform" novalidate="">
+<h1>AngularJs Form validation</h1>
+
+
+<label>Enter Your Full Name:</label>
+<input type="text" name="name" ng-model="name" pattern="[a-zA-Z]{1}" required=""><br>
+<span ng-show="myform.$submitted || myform.name.$dirty">
+<span class="error" ng-show="myform.$error.required"><i class="fa fa-exclamation-circle"></i>Name Required</span>
+<span class="error" ng-show="myform.$error.required"><i class="fa fa-exclamation-circle"></i>Name cannot be number</span><br><br>
+
+<label>Enter Your Email-ID:</label>
+<input type="email" name="email" ng-model="email" required=""><br>
+<span ng-show="myform.$submitted || myform.email.$dirty">
+<span class="error" ng-show="myform.$error.required"><i class="fa fa-exclamation-circle"></i>Enter in Email Format</span><br><br>
+
+
+
+<label>Gender:</label><br>
+Male:<input type="radio" name="gender" ng-model="gender" ng-value="&quot;Male&quot;" required=""><br>
+Female:<input type="radio" name="gender" ng-model="gender" ng-value="&quot;Female&quot;" required=""><br>
+
+<label>Male:</label>
+<span ng-show="myform.$submitted || myform.gender.$dirty">
+<span class="error" ng-show="myform.gender.$error.required"><i class="fa fa-exclamation-circle"></i>Gender Required</span>
+
+<label>Female:</label>
+<span ng-show="myform.$submitted || myform.gender.$dirty">
+<span class="error" ng-show="myform.gender.$error.required"><i class="fa fa-exclamation-circle"></i>Gender Required</span>
+</span><br><br>
+
+
+<label>Date Of Birth:</label>
+<input type="date" name="date" ng-model="date"  required=""><br>
+<span ng-show="myform.$submitted || myform.date.$dirty">
+<span class="error" ng-show="myform.date.$error.required"><i class="fa fa-exclamation-circle"></i>Date Of Birth Required</span>
+</span><br><br>
+
+
+
+
+</form>
+</div>
+</body>
+</html>

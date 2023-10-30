@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="myapp">
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+
+<body>
+<div ng-controller="mycontroller">
+
+<p>looping with objects</p>
+<ul>
+<li ng-repeat="x in names | orderBy:'name'">
+{{x.name + ", " + x.country}}
+</li>
+</ul>
+</div>
+<script>
+angular.module('myapp',[]).controller('mycontroller',function($scope){
+$scope.names=[
+{name:'dani',country:'india'},
+{name:'lana',country:'india'},
+{name:'mia',country:'india'},
+{name:'zoye',country:'india'},
+{name:'brandi',country:'india'},
+
+];
+
+});
+
+</script>
+</body>
+</html>

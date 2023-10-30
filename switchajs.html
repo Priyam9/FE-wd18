@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="">
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body>
+BIKE MODELS ARE AS FOLLOWED
+<select ng-model="mybikes">
+<option value="ducati">pinagle
+<option value="splendor">slenderpro
+<option value="shine">shine125
+<option value="luna">luna90
+</select>
+<hr>
+<hr>
+
+<div ng-switch="mybikes">
+
+<div ng-switch-when="ducati">
+<img src="ducati.jpg" style="border:2px solid red;">
+<h1>ducati pinagle</h1>
+</div>
+
+<div ng-switch-when="splendor">
+<img src="splendor.jpg" style="border:2px solid red;">
+<h1>splendor pro</h1>
+</div>
+
+<div ng-switch-when="shine">
+<img src="shine.jpg" style="border:2px solid red;">
+<h1>shine 125</h1>
+</div>
+
+<div ng-switch-when="luna">
+<img src="luna.jpg" style="border:2px solid red;">
+<h1>luna 1990</h1>
+</div>
+
+<div ng-switch-default>
+<h1>SELECT ANY ITEMS FROM DROPDOWN TO SWITCH THE CONTENT</h1>
+</div>
+
+</div>
+<hr>
+</body>
+</html>

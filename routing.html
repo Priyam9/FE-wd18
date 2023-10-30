@@ -1,0 +1,63 @@
+<!doctype html>
+<html ng-app="routesApp">
+
+<head>
+<title>AngularJs Routing with Multiple Views Example</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.route.min.js"></script>
+<script type="text/javascript">
+var app= angular.module("routesApp",['ngRoute']);
+app.config(['$routeProvider',
+function($routeProvider){
+$routeProvider.When('/routeURL1/:userId',{
+templateUrl:'sample1.html',
+controller:'sample1controller'
+})
+When('/routeURL2',{
+templateUrl:'sample2.html',
+controller:'sample2controller'
+})
+otherwise({
+redirectTo:'/login'
+});
+}
+]);
+app.controller('sample1controller',function($scope,$routeParams){
+$scope.uid=$route.Params.userId;
+})
+app.controller('sample2controller',function($scope){
+$scope.message='Test sample page 2 URL';
+})
+</script>
+</head>
+
+<body>
+<h2>AngularJs Routing with Multiple Views Example</h2>
+
+<div>
+
+<ul>
+
+<li>
+<a href="#/routeURL1/34124'">SAMPLE 1 WITH ROUTE PAGE PARAMETERS</a>
+</li>
+<li>
+<a href="#/routeURL2">SAMPLE 2 ROUTE PAGE</a>
+</li>
+
+</ul>
+
+<div ng-view></div>
+</div>
+
+<script type="text/ng-template" id="sample1.html">
+<h2>SAMPLE 1 WITH ROUTE PAGE PARAMETERS</h2>
+<b>userId:</b>{{uid}}
+</script>
+
+<script type="text/ng-template" id="sample2.html">
+<h2>SAMPLE 2 ROUTE PAGE</h2>
+{{message}}
+</script>
+</body>
+</html>

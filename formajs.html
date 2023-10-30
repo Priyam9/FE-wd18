@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="">
+<head>
+<style>
+body{
+background-color:{{color}};
+border:{{border}};
+height:{{hiwd}};
+width:{{hiwd}};
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body>
+Name:<input type="text" ng-model="name"><br>
+{{name}}<br>
+Email:<input type="email" ng-model="fish"><br>
+{{fish}}<br>
+Password:<input type="password" ng-model="animal"><br>
+{{animal}}<br>
+SelectColor:<input type="text" ng-model="color"><br>
+{{color}}<br>
+GiveBorder:<input type="text" ng-model="border"><br>
+{{border}}<br>
+HEIGHT & WIDTH:<input type="text" ng-model="hiwd"><br>
+{{hiwd}}<br>
+</body>
+</html>
